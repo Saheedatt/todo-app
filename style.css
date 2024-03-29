@@ -115,6 +115,7 @@ img {
   margin: 0 auto;
   background-color: #c59b76;
   padding-inline: 30px;
+  color: #131200;
   padding-block: 10px;
 }
 [type="submit"] {

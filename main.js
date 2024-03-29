@@ -26,7 +26,7 @@ function app() {
         "button",
         { type: "submit", onclick: add },
         //["Add"]
-        [mk("img", { src: "icons/plus.png", alt: "Add" })]
+        [mk("img", { src: "/plus.png", alt: "Add" })]
       ),
     ])),
     (ui.todos = mk("ul", { id: "todos" })),
@@ -51,7 +51,7 @@ function app() {
           onclick: () => remove(todo.id),
         },
         //["Delete"]
-        [mk("img", { src: "icons/delete.png", alt: "Delete" })]
+        [mk("img", { src: "/delete.png", alt: "Delete" })]
       )),
       (updateItem = mk(
         "button",
@@ -61,7 +61,7 @@ function app() {
           onclick: () => toggleEdit(todo.id),
         },
         //["Update"]
-        [mk("img", { src: "icons/refresh.png", alt: "Update" })]
+        [mk("img", { src: "/refresh.png", alt: "Update" })]
       )),
       (completedItem = mk(
         "button",
@@ -70,7 +70,7 @@ function app() {
           id: `completed-button-${todo.id}`,
           onclick: () => toggleCompleted(todo.id),
         },
-        [mk("img", { src: "icons/checked.png", alt: "Complete" })]
+        [mk("img", { src: "/checked.png", alt: "Complete" })]
       )),
     ]);
 
@@ -127,7 +127,7 @@ function app() {
       "button",
       { id: `save-button-${todoId}`, onclick: () => update(todoId) },
       //["Save"]
-      [mk("img", { src: "icons/changes.png", alt: "Saved" })]
+      [mk("img", { src: "/changes.png", alt: "Saved" })]
     );
 
     const updateButton = document.getElementById(`update-button-${todoId}`);
