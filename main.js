@@ -32,11 +32,11 @@ function app() {
     (ui.todos = mk("ul", { id: "todos" })),
   ]);
 
-  const mainContainer = mk("div", { id: "main-container" }, [header]);
+  const main = mk("div", { id: "main" }, [header]);
 
-  return mainContainer;
+  return main;
 
-  function createTodoElement(todo) {
+  function createTodo(todo) {
     let item, text, deleteItem, updateItem, completedItem;
 
     item = mk("li", { className: "todo-item", "data-id": todo.id }, [
@@ -101,7 +101,7 @@ function app() {
     // Find first
     const index = state.todos.findIndex((todo) => todo.id === todoId);
     if (index !== -1) {
-      // Remove item from state
+      //To remove item from state
       state.todos.splice(index, 1);
       renderTodos();
     }
@@ -167,10 +167,8 @@ function app() {
   function toggleCompleted(todoId) {
     const textElement = document.getElementById(`text-${todoId}`);
     if (textElement) {
-      // Toggle the completed class on the text element
       textElement.classList.toggle("completed");
 
-      // Toggle the not-completed class on the button element
       const completedButton = document.getElementById(
         `completed-button-${todoId}`
       );
@@ -189,7 +187,7 @@ function app() {
   function renderTodos() {
     ui.todos.innerHTML = "";
     state.todos.forEach((todo) => {
-      const todoElement = createTodoElement(todo);
+      const todoElement = createTodo(todo);
       ui.todos.appendChild(todoElement);
     });
   }
