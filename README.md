@@ -11,10 +11,10 @@ This is a Todo App created majorly using JavaScript. It allows users to add, upd
 - Delete Todo: Users can delete tasks from the todo list by clicking the "Delete" button next to the task.
 
 
-##  Screenshots
+##  Screenshot
 ![Todo App](Screenshot.png)
 
 
 Technologies Used
-CSS
-JavaScript
+- CSS
+- JavaScript
