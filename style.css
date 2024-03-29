@@ -68,7 +68,6 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
@@ -112,12 +111,11 @@ img {
 }
 
 #main-container {
-  max-width:600px;
+  max-width: 600px;
   margin: 0 auto;
   background-color: #c59b76;
   padding-inline: 30px;
   padding-block: 10px;
-  /*text-align: center;*/
 }
 [type="submit"] {
   width: 50px;
@@ -126,6 +124,10 @@ img {
   border: 1px solid #000;
   border-radius: 5px;
   cursor: pointer;
+}
+#header h1 {
+  font-size: 40px;
+  text-align: center;
 }
 .todo {
   border: 1px solid #444;
@@ -183,4 +185,51 @@ button:hover {
 
 .todo-text {
   flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  #main-container {
+    margin: 0 auto;
+    padding-inline: 15px;
+  }
+  [type="submit"] {
+    width: 30px;
+    height: auto;
+    padding-block: 4px;
+    padding-inline: 6px;
+  }
+  img {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+  .todo {
+    padding: 0.4em 0;
+    padding-left: 4px;
+    margin-inline-start: 30px;
+  }
+  form {
+    width: 85%;
+    padding-block: 10px;
+    font-size: 12px;
+  }
+  .todo-item {
+    margin-bottom: 6px;
+    padding: 4px;
+  }
+  .update-input {
+    width: 30%;
+    padding-block: 0.8em;
+    padding-inline-start: 3px;
+    font-size: 12px;
+  }
+  button img {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+  #header h1 {
+    font-size: 17px;
+    text-align: center;
+  }
 }

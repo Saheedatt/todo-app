@@ -26,26 +26,23 @@ function app() {
         "button",
         { type: "submit", onclick: add },
         //["Add"]
-        [mk("img", { src: "icons/plus.png", alt: "Add item" })]
+        [mk("img", { src: "icons/plus.png", alt: "Add" })]
       ),
     ])),
     (ui.todos = mk("ul", { id: "todos" })),
   ]);
-  //const todoListContainer = mk("div", { id: "todo-list-container" });
 
-  const mainContainer = mk("div", { id: "main-container" }, [
-    header,
-    //todoListContainer,
-  ]);
+  const mainContainer = mk("div", { id: "main-container" }, [header]);
 
   return mainContainer;
-
 
   function createTodoElement(todo) {
     let item, text, deleteItem, updateItem, completedItem;
 
     item = mk("li", { className: "todo-item", "data-id": todo.id }, [
-      (text = mk("span", {className: "todo-text", id: `text-${todo.id}` }, [todo.text])),
+      (text = mk("span", { className: "todo-text", id: `text-${todo.id}` }, [
+        todo.text,
+      ])),
       (deleteItem = mk(
         "button",
         {
@@ -64,7 +61,7 @@ function app() {
           onclick: () => toggleEdit(todo.id),
         },
         //["Update"]
-        [mk("img", { src: "icons/refresh.png", alt: "Updated" })]
+        [mk("img", { src: "icons/refresh.png", alt: "Update" })]
       )),
       (completedItem = mk(
         "button",
@@ -73,7 +70,7 @@ function app() {
           id: `completed-button-${todo.id}`,
           onclick: () => toggleCompleted(todo.id),
         },
-        [mk("img", { src: "icons/checked.png", alt: "Completed" })]
+        [mk("img", { src: "icons/checked.png", alt: "Complete" })]
       )),
     ]);
 
@@ -118,7 +115,11 @@ function app() {
 
     const text = currentText.textContent;
 
-    const textInput = mk("input", { id: `text-input-${todoId}`, value: text , className: 'update-input'});
+    const textInput = mk("input", {
+      id: `text-input-${todoId}`,
+      value: text,
+      className: "update-input",
+    });
 
     currentText.replaceWith(textInput);
 
