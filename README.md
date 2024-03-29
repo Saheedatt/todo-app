@@ -12,7 +12,8 @@ This is a Todo App created majorly using JavaScript. It allows users to add, upd
 
 
 ##  Screenshots
-[Screenshot.png]
+![Todo App](Screenshot.png)
+
 
 Technologies Used
 CSS
